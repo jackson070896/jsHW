@@ -1,17 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная страница</title>
+    <title>Products</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<button onclick="rockPaperScissors.game(0)">Камень</button>
-<button onclick="rockPaperScissors.game(1)">Ножницы</button>
-<button onclick="rockPaperScissors.game(2)">Бумага</button>
+<div class="container">
+    <div class="header-catalog padding-site">
+        <a href="#"><img src="img/logo.svg" alt="logo"></a>
+        <ul class="menu clearfix">
+            <li class="menu-list"><a href="index.html" class="menu-link menu-link-active">PRODUCTS</a></li>
+            <li class="menu-list"><a href="#" class="menu-link">CART</a></li>
+            <li class="menu-list"><a href="#" class="menu-link"><img src="img/search.svg" alt="Search"></a></li>
+        </ul>
+        <div class="header-text">
+            <h2 class="header-h2">Our Products Range</h2>
+        </div>
+    </div>
+    <div class="catalog padding-site">
+        <div class="tab-header clearfix">
+            <ul class="tab-control clearfix">
+                <li class="tab-list-production tab-list-production-active"><a href="#">All</a></li>
+                <li class="tab-list-production"><a href="#">HOME</a></li>
+                <li class="tab-list-production"><a href="#">OFFICE</a></li>
+                <li class="tab-list-production"><a href="#">FURNITURE</a></li>
+                <li class="tab-list-production"><a href="#">MODERN</a></li>
+                <li class="tab-list-production"><a href="#">CLASSIC</a></li>
+            </ul>
+        </div>
+        <div class="products">
+            <div class="row">
 
+            </div>
+            <div class="row-refresh">
+                <div class="refresh">
+                    <img src="img/refresh.png" alt="refresh">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="promo-product">
+        <div class="promo-content-1 padding-promo">
+            <div class="promo-text">
+                <p class="promo-exclusive">exclusive</p>
+                <h2 class="promo-h2">Fishnet Chair</h2>
+                <p class="promo-content">Seat and back with upholstery made of cold cure foam. Steel frame,
+                    available in
+                    matt</p>
+                <a href="#" class="button">Order Us</a>
+            </div>
+        </div>
+        <div class="promo-content-2 padding-promo">
+            <div class="promo-text">
+                <p class="promo-exclusive">exclusive</p>
+                <h2 class="promo-h2">Fishnet Chair</h2>
+                <p class="promo-content">Seat and back with upholstery made of cold cure foam. Steel frame,
+                    available in
+                    matt</p>
+                <a href="#" class="button">Order Us</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-row padding-site">
+            <div class="footer-row-item">
+                <div class="footer-row-item-header">Contact Us</div>
+                <div class="footer-row-item-content">
+                    <p class="street">132A Bridge Road Richmond VIC
+                        Australia.</p><br>
+                    <p class="tel">Talk to us on 1300 132
+                        info@interior.com</p>
+                </div>
+            </div>
+            <div class="footer-row-item">
+                <div class="footer-row-item-header">Useful Information</div>
+                <div class="footer-row-item-content-center">
+                    <div class="footer-row-item-content-list">
+                        <a href="#" class="footer-row-item-content-link">Sales terms</a>
+                        <a href="#" class="footer-row-item-content-link">Customer care</a>
+                        <a href="#" class="footer-row-item-content-link">Delivery</a>
+                    </div>
+                    <div class="footer-row-item-content-list">
+                        <a href="#" class="footer-row-item-content-link">Architect accounts</a>
+                        <a href="#" class="footer-row-item-content-link">Careers</a>
+                        <a href="#" class="footer-row-item-content-link">Exchanges & returns</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-row-item">
+                <div class="footer-row-item-header">Let’s Stay in Touch!</div>
+                <div class="footer-row-item-content">
+                    <p class="distribution">Subscribe to know about our latest news, products and special offers
+                        just
+                        for subscribers.</p>
+                    <input class="email" type="email" placeholder="your email address">
+                </div>
+            </div>
+        </div>
+        <div class="footer-row padding-site">
+            <div class="footer-row-item-end"><p class="copy">&copy;Copyright - INTERIOR 2016. All Rights
+                Reserved.</p>
+            </div>
+            <div class="footer-row-item-end">
+                <a href="#"><img src="img/social-links.jpg" alt="Social links"></a>
+            </div>
+            <div class="footer-row-item-end">
+                <p class="rights">Terms & Conditions / Privacy policy & Cookies</p>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="js/script.js"></script>
 </body>
 </html>
