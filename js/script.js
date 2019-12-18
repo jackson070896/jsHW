@@ -41,7 +41,7 @@ let catalog = {
                                     <span>${this.items[i].product_name}</span>
                                     <span>${this.items[i].price}</span>
                                 </div>
-                                <button>Купить</button>
+                                <button name="cart-btn">Купить</button>
                             </div>`;
                 i++;
             }
@@ -82,3 +82,30 @@ let cart = {
     }
 };
 catalog.construct();
+window.onload = () =>{
+    let btn = document.querySelectorAll('button[name = "cart-btn"]');
+    for(let i = 0; i < btn.length; i++){
+        btn[i].addEventListener(`click`, addCartProduct);
+    }
+};
+
+
+function addCartProduct(event){
+    let price = event.target.previousSibling.previousSibling.childNodes[3].textContent;
+    let nameProduct = event.target.previousSibling.previousSibling.childNodes[1].textContent;
+    let img = event.target.previousSibling.previousSibling.previousSibling.previousSibling;
+    let cartEl = document.querySelector(`.cart`);
+    let row = '';
+    let a = 0;
+    let total = document.querySelector(`.totalPrice`);
+    let summTotalPrice = document.querySelectorAll(`.cartPrice`);
+    row+= `<div class="item">${img}<p>Name: ${nameProduct}</p> <p class="cartPrice">${price}</p></div>`;
+    cartEl.innerHTML += row;
+
+    for (let i = 0; i < summTotalPrice.length; i++){
+        a += parseInt(summTotalPrice[i].textContent);
+    }
+    let rowT =  `<span>Total price: </span><span>${a}</span>`;
+    total.innerHTML = rowT;
+    console.log('Итоговая стоимость: ' + total);
+}
