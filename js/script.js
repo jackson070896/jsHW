@@ -41,7 +41,7 @@ let catalog = {
                                     <span>${this.items[i].product_name}</span>
                                     <span>${this.items[i].price}</span>
                                 </div>
-                                <button name="cart-btn">Купить</button>
+                                <button class="btn" name="cart-btn">Купить</button>
                             </div>`;
                 i++;
             }
@@ -97,15 +97,55 @@ function addCartProduct(event){
     let cartEl = document.querySelector(`.cart`);
     let row = '';
     let a = 0;
-    let total = document.querySelector(`.totalPrice`);
     let summTotalPrice = document.querySelectorAll(`.cartPrice`);
-    row+= `<div class="item">${img}<p>Name: ${nameProduct}</p> <p class="cartPrice">${price}</p></div>`;
+    row+= `<div class="item">${img}<p><b>Name: ${nameProduct}</b></p> <p class="cartPrice">${price}</p></div>`;
     cartEl.innerHTML += row;
 
     for (let i = 0; i < summTotalPrice.length; i++){
         a += parseInt(summTotalPrice[i].textContent);
     }
-    let rowT =  `<span>Total price: </span><span>${a}</span>`;
+    let total = document.getElementById(`totalPrice`);
+    let rowT = '';
+    rowT =  `<p>Итоговая стоимость ${a}</p>`;
     total.innerHTML = rowT;
-    console.log('Итоговая стоимость: ' + total);
+
 }
+
+// Домашняя работа № 8
+
+// 1  Ответ: a = undefined
+
+if (!("a" in window)) {
+    var a = 1;
+}
+alert(a);
+
+// 2 Ответ: a = Если не ошибаюсь a не объявлена
+
+var b = function a(x) {
+    x && a(--x);
+};
+alert(a);
+
+// 3 Ответ: a = код функции
+
+function a(x) {
+    return x * 2;
+}
+var a;
+alert(a);
+
+// 4 Ответ: a = 10
+
+function b(x, y, a) {
+    arguments[2] = 10;
+    alert(a);
+}
+b(1, 2, 3);
+
+// 5 Ответ: a = null , но здесь я не уверен
+
+function a() {
+    alert(this);
+}
+a.call(null);
